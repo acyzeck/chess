@@ -1,7 +1,7 @@
-### Chess Clone
+# Chess Clone
 
 
-## Technologies Used
+### Technologies Used
 - ReactJS
 - Vite
 - Typescript
