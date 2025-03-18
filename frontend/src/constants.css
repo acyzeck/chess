@@ -1,0 +1,29 @@
+:root {
+    --tile-size: clamp(
+        40px,
+        10vw,
+        100px
+    ); /* Ensures a minimum and maximum tile size */
+    --light-tile: #f0d8b7;
+    --dark-tile: #b48764;
+    --bg-color: #202020;
+}
+
+/* Fine-tuning for different screen sizes */
+@media (max-width: 768px) {
+    :root {
+        --tile-size: clamp(35px, 12vw, 80px);
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        --tile-size: clamp(30px, 15vw, 60px);
+    }
+}
+
+@media (max-width: 300px) {
+    :root {
+        --tile-size: clamp(25px, 20vw, 50px);
+    }
+}

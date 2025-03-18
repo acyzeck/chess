@@ -1,0 +1,38 @@
+.board {
+    display: grid;
+    grid-template-columns: 1fr repeat(8, var(--tile-size)) 1fr; /* One extra column for the files */
+    grid-template-rows: 1fr repeat(8, var(--tile-size)) 1fr; /* One extra row for the ranks */
+    position: relative;
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(8, var(--tile-size));
+    grid-template-rows: repeat(8, var(--tile-size));
+    width: calc(var(--tile-size) * 8);
+    grid-column: 2 / span 8; /* Make tiles fill from the second column */
+    grid-row: 2 / span 8; /* Make tiles fill from the second row */
+}
+
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+}
+
+.tile-light {
+    background: var(--light-tile);
+}
+
+.tile-dark {
+    background: var(--dark-tile);
+}
+
+.ranks {
+    grid-column: 1;
+    grid-row: 2 / span 8; /* Place ranks along the left side */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5px;
+}
